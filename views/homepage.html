@@ -1,0 +1,31 @@
+
+<section class="tab-inner" id="homepage"  ng-controller="homepageCtrl">
+  <section class="tab-content">
+    <nav class="content-search">
+      <div class="content-search-wrap">
+        <input type="text">
+        <div class="content-search-icon">
+          <div class="img"></div>
+        </div>
+      </div>
+    </nav>
+    <section class="home-list" >
+      <div class="home-item" ng-repeat="v in chat">
+
+        <div class="chat-list" ng-swipe-left="show=true" ng-swipe-right="show=false" ng-init="show=false" ng-class="{'active':show}" >
+          <a href="#chat/{{$index}}" style="position:absolute;width:100%;height:100%">
+          <div class="home-icon"><img src="{{v.image}}" alt=""  ></div>
+          <div class="text">
+            <p class="name">{{v.name}}</p>
+            <p class="chat">{{v.content}}</p>
+          </div>
+        </a>
+        </div>
+        <div class="delete" ng-click="delete($index)">删除</div>
+
+      </div>
+
+    </section>
+  </section>
+
+</section>

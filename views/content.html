@@ -1,0 +1,54 @@
+<section class="tab-inner" ng-controller="contentCtrl">
+  <section class="tab-content">
+    <nav class="content-search">
+      <div class="content-search-wrap">
+        <input type="text">
+        <div class="content-search-icon">
+          <div class="img"></div>
+        </div>
+      </div>
+    </nav>
+    <section class="content-op">
+      <section>
+        <div class="info-icon">
+          <div class="img img1"></div>
+        </div>
+        <div class="text">新的朋友</div>
+      </section>
+      <section>
+        <div class="info-icon">
+          <div class="img img2"></div>
+        </div>
+        <div class="text">群聊</div>
+      </section>
+      <section>
+        <div class="info-icon">
+          <div class="img img3"></div>
+        </div>
+        <div class="text">标签</div>
+      </section>
+      <section>
+        <div class="info-icon">
+          <div class="img img4"></div>
+        </div>
+        <div class="text">公众号</div>
+      </section>
+    </section>
+    <section class="content-friend">
+      <section class="onefriend" ng-repeat="v in friendlist">
+        <section class="friend-bar">{{v.keys}}</section>
+        <section class="friend-inner" ng-repeat="m in v.person">
+          <div class="info-icon">
+            <img src="{{m.image}}" alt="">
+          </div>
+          <div class="text">{{m.name}}</div>
+        </section>
+      </section>
+    </section>
+  </section>
+  <div class="side-navigation">
+    <ul>
+      <li  ng-repeat="v in friendlist"><a href="">{{v.keys}}</a></li>
+    </ul>
+  </div>
+</section>

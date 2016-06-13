@@ -1,0 +1,15 @@
+
+<section class="tab-inner" id="chat"  ng-controller="chatCtrl">
+  <section class="tab-content">
+    <section class="chat" ng-repeat='v in chatlist'  ng-class="{me:{{v.is}}}">
+      <div class="img" >
+        <img ng-if="!v.is" src="{{herimg}}" alt="">
+        <img ng-if="v.is" src="./images/t-2.jpg" alt="">
+      </div>
+      <div class="text">
+        <span>{{v.record}}</span>
+      </div>
+    </section>
+  </section>
+
+</section>
